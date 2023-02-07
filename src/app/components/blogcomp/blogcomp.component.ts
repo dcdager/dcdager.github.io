@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Article } from 'src/app/interfaces/article.interface';
 
 @Component({
   selector: 'app-blogcomp',
@@ -10,7 +11,7 @@ export class BlogcompComponent {
   atext : string = "";
   afecha : string = "";
   aurl : string = "";
-  arrArticles : any[] = [];
+  arrArticles : Article[] = [];
 
   constructor() {
     this.arrArticles = [
@@ -28,7 +29,7 @@ export class BlogcompComponent {
   }
 
   guardar ():void {
-    let article = {
+    let article : Article = {
       titulo: this.title,
       texto: this.atext,
       fecha: this.afecha,
