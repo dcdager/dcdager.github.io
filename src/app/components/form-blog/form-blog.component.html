@@ -1,0 +1,30 @@
+<div class="header">
+    <h2>Carga de artículo</h2>
+    <div class="bloque">
+        <label for="titulo">Título:</label>
+        <input class="long" type="text" id="titulo" [(ngModel)]="title" required  #nombreInput="ngModel" />
+        
+    </div>
+    <div class="bloque">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" [(ngModel)]="afecha" required #fechaInput="ngModel"/>
+    </div>
+    <div class="bloque">
+        <label for="dir">URL:</label>
+        <input class="long" type="url" id="dir" [(ngModel)]="aurl" required #urlInput="ngModel"/>
+    </div>
+        <div class="contenido">
+            <label for="texto">Texto:</label>
+            <textarea rows="4" cols="80" id="texto" [(ngModel)]="atext" required #textoInput="ngModel"></textarea>
+          
+        </div>
+    
+    <div  *ngIf="nombreInput.invalid || textoInput.invalid || fechaInput.invalid || urlInput.invalid" class="error">
+      <p class="blinking">Por favor llene todos los campos para poder guardar.</p>
+    </div>
+    <div class="center">
+    <button class="boton" (click)=guardar() *ngIf="!nombreInput.invalid && !textoInput.invalid && !fechaInput.invalid && !urlInput.invalid" >Guardar</button>
+    </div>
+    
+</div>
+<hr>

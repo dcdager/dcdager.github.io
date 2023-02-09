@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BlogcompComponent } from './components/blogcomp/blogcomp.component';
+import { FormBlogComponent } from './components/form-blog/form-blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogcompComponent
+    BlogcompComponent,
+    FormBlogComponent
   ],
   imports: [
     BrowserModule,
